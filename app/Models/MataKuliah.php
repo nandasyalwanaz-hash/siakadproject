@@ -24,4 +24,14 @@ protected $fillable = [
     {
         return $this->hasMany(Krs::class);
     }
+
+    public function jadwalKuliah()
+    {
+        return $this->hasMany(JadwalKuliah::class);
+    }
+
+    public function absensi()
+    {
+        return $this->hasMany(Absensi::class);
+    }
 }

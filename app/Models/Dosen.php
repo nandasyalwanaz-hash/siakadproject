@@ -16,8 +16,13 @@ class Dosen extends Model
         'alamat'
     ];
 
- public function mataKuliah()
+    public function mataKuliah()
     {
         return $this->hasMany(MataKuliah::class);
+    }
+
+    public function jadwalKuliah()
+    {
+        return $this->hasMany(JadwalKuliah::class);
     }
 }

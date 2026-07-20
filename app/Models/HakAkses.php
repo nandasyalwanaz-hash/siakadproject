@@ -19,4 +19,9 @@ class HakAkses extends Model
         'can_edit',
         'can_delete',
     ];
+
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
 }

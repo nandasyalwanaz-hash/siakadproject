@@ -29,4 +29,9 @@ public function krs()
 {
     return $this->hasMany(Krs::class);
 }
+
+public function absensi()
+{
+    return $this->hasMany(Absensi::class);
+}
 }
