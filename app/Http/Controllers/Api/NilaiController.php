@@ -27,7 +27,7 @@ class NilaiController extends Controller
     {
         $data = $request->validated();
 
-        if ($data['nilai_tugas'] && $data['nilai_uts'] && $data['nilai_uas']) {
+        if (isset($data['nilai_tugas'], $data['nilai_uts'], $data['nilai_uas'])) {
             $akhir = ($data['nilai_tugas'] * 0.3)
                    + ($data['nilai_uts'] * 0.3)
                    + ($data['nilai_uas'] * 0.4);
@@ -55,7 +55,7 @@ class NilaiController extends Controller
     {
         $data = $request->validated();
 
-        if ($data['nilai_tugas'] && $data['nilai_uts'] && $data['nilai_uas']) {
+        if (isset($data['nilai_tugas'], $data['nilai_uts'], $data['nilai_uas'])) {
             $akhir = ($data['nilai_tugas'] * 0.3)
                    + ($data['nilai_uts'] * 0.3)
                    + ($data['nilai_uas'] * 0.4);
